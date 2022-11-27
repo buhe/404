@@ -16,6 +16,7 @@
 		3F949E7B2933377200E2A169 /* _04UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F949E7A2933377200E2A169 /* _04UITestsLaunchTests.swift */; };
 		3F949E88293342D900E2A169 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F949E87293342D900E2A169 /* Model.swift */; };
 		3F949E8A293342FB00E2A169 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F949E89293342FB00E2A169 /* ViewModel.swift */; };
+		3F949E8C2933650C00E2A169 /* Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F949E8B2933650C00E2A169 /* Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		3F949E7A2933377200E2A169 /* _04UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _04UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3F949E87293342D900E2A169 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		3F949E89293342FB00E2A169 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		3F949E8B2933650C00E2A169 /* Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +100,13 @@
 		3F949E5C2933377200E2A169 /* 404 */ = {
 			isa = PBXGroup;
 			children = (
-				3F949E5D2933377200E2A169 /* _04App.swift */,
 				3F949E5F2933377200E2A169 /* ContentView.swift */,
+				3F949E5D2933377200E2A169 /* _04App.swift */,
 				3F949E612933377200E2A169 /* Assets.xcassets */,
 				3F949E632933377200E2A169 /* Preview Content */,
 				3F949E87293342D900E2A169 /* Model.swift */,
 				3F949E89293342FB00E2A169 /* ViewModel.swift */,
+				3F949E8B2933650C00E2A169 /* Ex.swift */,
 			);
 			path = 404;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				3F949E88293342D900E2A169 /* Model.swift in Sources */,
 				3F949E602933377200E2A169 /* ContentView.swift in Sources */,
 				3F949E8A293342FB00E2A169 /* ViewModel.swift in Sources */,
+				3F949E8C2933650C00E2A169 /* Ex.swift in Sources */,
 				3F949E5E2933377200E2A169 /* _04App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

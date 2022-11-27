@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct Model {
+    static var methodsConst = ["Base64"]
+    
+    var methods = methodsConst
+    
+    var method = methodsConst[0]
+    
+    var rawText: String = "要编码的..."
+    var encoding: String = "要解码的..."
+}
