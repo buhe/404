@@ -37,7 +37,7 @@ struct ContentView: View {
                          Text($0)
                      }
                  }.frame(minWidth: 100)
-                    Toggle("With", isOn: $with).labelsHidden()
+//                    Toggle("With", isOn: $with).labelsHidden()
                         
                 }
             }.frame(maxHeight: 44)
