@@ -14,6 +14,8 @@
 		3F949E6F2933377200E2A169 /* _04Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F949E6E2933377200E2A169 /* _04Tests.swift */; };
 		3F949E792933377200E2A169 /* _04UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F949E782933377200E2A169 /* _04UITests.swift */; };
 		3F949E7B2933377200E2A169 /* _04UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F949E7A2933377200E2A169 /* _04UITestsLaunchTests.swift */; };
+		3F949E88293342D900E2A169 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F949E87293342D900E2A169 /* Model.swift */; };
+		3F949E8A293342FB00E2A169 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F949E89293342FB00E2A169 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		3F949E742933377200E2A169 /* 404UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 404UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F949E782933377200E2A169 /* _04UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _04UITests.swift; sourceTree = "<group>"; };
 		3F949E7A2933377200E2A169 /* _04UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _04UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F949E87293342D900E2A169 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		3F949E89293342FB00E2A169 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				3F949E5F2933377200E2A169 /* ContentView.swift */,
 				3F949E612933377200E2A169 /* Assets.xcassets */,
 				3F949E632933377200E2A169 /* Preview Content */,
+				3F949E87293342D900E2A169 /* Model.swift */,
+				3F949E89293342FB00E2A169 /* ViewModel.swift */,
 			);
 			path = 404;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F949E88293342D900E2A169 /* Model.swift in Sources */,
 				3F949E602933377200E2A169 /* ContentView.swift in Sources */,
+				3F949E8A293342FB00E2A169 /* ViewModel.swift in Sources */,
 				3F949E5E2933377200E2A169 /* _04App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
