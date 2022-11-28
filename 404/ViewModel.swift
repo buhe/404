@@ -10,14 +10,28 @@ import Foundation
 class ViewModel: ObservableObject {
     @Published var model = Model()
     
-    func encoding() {
+    func encodingText() {
         switch model.method {
         case "Base64": model.encoding = model.rawText.data.base64EncodedString()
         default: break
         }
     }
     
-    func decoding() {
+    func decodingText() {
+        switch model.method {
+        case "Base64": model.encoding = model.rawText.data.base64Decoded?.string ?? ""
+        default: break
+        }
+    }
+    
+    func encodingImage() {
+        switch model.method {
+        case "Base64": model.encoding = model.rawText.data.base64EncodedString()
+        default: break
+        }
+    }
+    
+    func decodingImage() {
         switch model.method {
         case "Base64": model.encoding = model.rawText.data.base64Decoded?.string ?? ""
         default: break

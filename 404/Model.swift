@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Model {
     static var methodsConst = ["Base64"]
@@ -16,4 +17,6 @@ struct Model {
     
     var rawText: String = "要编码的或者要解码的..."
     var encoding: String = "结果"
+    
+    var rawImage: Image?
 }

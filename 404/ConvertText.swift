@@ -16,12 +16,12 @@ struct ConvertText: View {
                 NavigationView {
                     HStack {
                          Button{
-                             vm.encoding()
+                             vm.encodingText()
                          } label: {
                            Text("编码")
                          }
                         Button{
-                            vm.decoding()
+                            vm.decodingText()
                         } label: {
                           Text("解码")
                         }

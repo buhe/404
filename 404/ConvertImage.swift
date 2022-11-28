@@ -17,12 +17,12 @@ struct ConvertImage: View {
                 NavigationView {
                 HStack {
                          Button{
-                             vm.encoding()
+                             vm.encodingImage()
                          } label: {
                            Text("编码")
                          }
                         Button{
-                            vm.decoding()
+                            vm.decodingImage()
                         } label: {
                           Text("解码")
                         }
@@ -35,8 +35,9 @@ struct ConvertImage: View {
                         ShareLink(item: vm.model.encoding) {
                             Label("分享", systemImage:  "square.and.arrow.up")
                         }
+                        Spacer()
                     }
-                }.frame(maxHeight: 44)
+                }.frame(maxHeight: 44).padding()
        
                 TextField("resultText", text: $vm.model.encoding, axis: .vertical).lineLimit(15...15).padding()
             }
