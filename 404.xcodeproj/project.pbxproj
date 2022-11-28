@@ -19,6 +19,7 @@
 		3F949E8C2933650C00E2A169 /* Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F949E8B2933650C00E2A169 /* Ex.swift */; };
 		3FCD04AB2934B19B00125FC5 /* ConvertText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD04AA2934B19B00125FC5 /* ConvertText.swift */; };
 		3FCD04AD2934B1CA00125FC5 /* ConvertImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD04AC2934B1CA00125FC5 /* ConvertImage.swift */; };
+		3FCD04AF2934C42400125FC5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD04AE2934C42400125FC5 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		3F949E8B2933650C00E2A169 /* Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex.swift; sourceTree = "<group>"; };
 		3FCD04AA2934B19B00125FC5 /* ConvertText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertText.swift; sourceTree = "<group>"; };
 		3FCD04AC2934B1CA00125FC5 /* ConvertImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertImage.swift; sourceTree = "<group>"; };
+		3FCD04AE2934C42400125FC5 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				3F949E8B2933650C00E2A169 /* Ex.swift */,
 				3FCD04AA2934B19B00125FC5 /* ConvertText.swift */,
 				3FCD04AC2934B1CA00125FC5 /* ConvertImage.swift */,
+				3FCD04AE2934C42400125FC5 /* ImagePicker.swift */,
 			);
 			path = 404;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				3F949E8A293342FB00E2A169 /* ViewModel.swift in Sources */,
 				3F949E8C2933650C00E2A169 /* Ex.swift in Sources */,
 				3FCD04AB2934B19B00125FC5 /* ConvertText.swift in Sources */,
+				3FCD04AF2934C42400125FC5 /* ImagePicker.swift in Sources */,
 				3F949E5E2933377200E2A169 /* _04App.swift in Sources */,
 				3FCD04AD2934B1CA00125FC5 /* ConvertImage.swift in Sources */,
 			);

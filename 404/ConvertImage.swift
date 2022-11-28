@@ -9,6 +9,10 @@ import SwiftUI
 
 struct ConvertImage: View {
     @ObservedObject var vm: ViewModel
+    @State private var showSheet = false
+    @State private var showPhotoLib = false
+    @State private var showCamera = false
+    @State private var showDatePick = false
     
     var body: some View {
         ScrollView {
@@ -16,32 +20,56 @@ struct ConvertImage: View {
                 TextField("rawText", text: $vm.model.rawText, axis: .vertical).lineLimit(15...15).padding()
                 NavigationView {
                 HStack {
-                         Button{
-                             vm.encodingImage()
-                         } label: {
-                           Text("编码")
-                         }
                         Button{
-                            vm.decodingImage()
-                        } label: {
-                          Text("解码")
-                        }
-                        Picker("method?", selection: $vm.model.method) {
-                             ForEach(vm.model.methods, id: \.self) {
-                                 Text($0)
-                             }
-                         }.frame(minWidth: 100)
+                           if hasCamera() {
+                               showCamera = true
+                           }
+                       } label: {Image(systemName: "camera")}
+                       .sheet(isPresented: $showCamera) {
+                           ImagePicker(sourceType: .camera) {
+                                                       seleted in
+                               vm.model.rawImage = seleted
+                                                   }
+                       }
+                       Button{
+                           showPhotoLib = true
+                       }label: {Image(systemName: "photo.artframe")}
+                       .sheet(isPresented: $showPhotoLib) {
+                           ImagePicker(sourceType: .photoLibrary) {
+                                                       seleted in
+                               vm.model.rawImage = seleted
+                                                   }
+                       }
+                     Button{
+                         vm.encodingImage()
+                     } label: {
+                       Text("编码")
+                     }
+                    Button{
+                        vm.decodingImage()
+                    } label: {
+                      Text("解码")
+                    }
+                    Picker("method?", selection: $vm.model.method) {
+                         ForEach(vm.model.methods, id: \.self) {
+                             Text($0)
+                         }
+                     }.frame(minWidth: 100)
     //                    Toggle("With", isOn: $with).labelsHidden()
-                        ShareLink(item: vm.model.encoding) {
-                            Label("分享", systemImage:  "square.and.arrow.up")
-                        }
-                        Spacer()
+                    ShareLink(item: vm.model.encoding) {
+                        Label("分享", systemImage:  "square.and.arrow.up")
+                    }
+                    Spacer()
                     }
                 }.frame(maxHeight: 44).padding()
        
                 TextField("resultText", text: $vm.model.encoding, axis: .vertical).lineLimit(15...15).padding()
             }
         }.tabItem{Label("图片", systemImage: "photo")}
+    }
+    
+    private func hasCamera() -> Bool {
+        false
     }
 }
 
