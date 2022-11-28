@@ -14,7 +14,7 @@ struct ConvertText: View {
             VStack {
                 TextField("rawText", text: $vm.model.rawText, axis: .vertical).lineLimit(15...15).padding()
                 NavigationView {
-                HStack {
+                    HStack {
                          Button{
                              vm.encoding()
                          } label: {
@@ -34,8 +34,9 @@ struct ConvertText: View {
                         ShareLink(item: vm.model.encoding) {
                             Label("分享", systemImage:  "square.and.arrow.up")
                         }
+                        Spacer()
                     }
-                }.frame(maxHeight: 44)
+                }.frame(maxHeight: 44).padding()
        
                 TextField("resultText", text: $vm.model.encoding, axis: .vertical).lineLimit(15...15).padding()
             }

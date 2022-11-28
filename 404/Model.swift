@@ -14,6 +14,6 @@ struct Model {
     
     var method = methodsConst[0]
     
-    var rawText: String = "要编码的..."
-    var encoding: String = "要解码的..."
+    var rawText: String = "要编码的或者要解码的..."
+    var encoding: String = "结果"
 }
