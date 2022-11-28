@@ -49,7 +49,7 @@ struct ContentView: View {
                
                         TextField("resultText", text: $vm.model.encoding, axis: .vertical).lineLimit(15...15).padding()
                     }
-                }.tabItem{Label("文字", systemImage: "text.viewfinder")}
+                }.scrollDismissesKeyboard(.immediately).tabItem{Label("文字", systemImage: "text.viewfinder")}
                 
                 ScrollView {
                     VStack {
