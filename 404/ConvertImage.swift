@@ -17,7 +17,12 @@ struct ConvertImage: View {
     var body: some View {
         ScrollView {
             VStack {
-                TextField("rawText", text: $vm.model.rawText, axis: .vertical).lineLimit(15...15).padding()
+                if let raw = vm.model.rawImage {
+                    Image(uiImage: raw).resizable().frame(height: 384).padding()
+                } else {
+                    Color.white.frame(height: 384).padding()
+                }
+            
                 NavigationView {
                 HStack {
                         Button{
