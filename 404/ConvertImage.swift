@@ -30,7 +30,7 @@ struct ConvertImage: View {
                                                        seleted in
                                vm.model.rawImage = seleted
                                                    }
-                       }
+                       }.padding(.trailing)
                        Button{
                            showPhotoLib = true
                        }label: {Image(systemName: "photo.artframe")}
@@ -39,7 +39,7 @@ struct ConvertImage: View {
                                                        seleted in
                                vm.model.rawImage = seleted
                                                    }
-                       }
+                       }.padding(.trailing)
                      Button{
                          vm.encodingImage()
                      } label: {
