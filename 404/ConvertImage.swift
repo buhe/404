@@ -62,7 +62,7 @@ struct ConvertImage: View {
                      }.frame(minWidth: 100)
     //                    Toggle("With", isOn: $with).labelsHidden()
                     ShareLink(item: vm.model.encoding) {
-                        Label("分享", systemImage:  "square.and.arrow.up")
+                        Image(systemName: "square.and.arrow.up")
                     }
                     Spacer()
                     }

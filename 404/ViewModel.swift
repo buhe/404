@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class ViewModel: ObservableObject {
     @Published var model = Model()
@@ -26,14 +27,22 @@ class ViewModel: ObservableObject {
     
     func encodingImage() {
         switch model.method {
-        case "Base64": model.encoding = model.rawText.data.base64EncodedString()
+        case "Base64":
+            if let image = model.rawImage {
+                print("image is not null.")
+                model.encoding = image.jpegData(compressionQuality: 0.1)?.base64EncodedString() ?? ""
+            }
         default: break
         }
     }
     
     func decodingImage() {
         switch model.method {
-        case "Base64": model.encoding = model.rawText.data.base64Decoded?.string ?? ""
+        case "Base64":
+            let imageData = Data(base64Encoded: model.encoding)
+            if let data = imageData {
+                model.rawImage = UIImage(data: data)
+            }
         default: break
         }
     }
