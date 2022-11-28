@@ -8,13 +8,43 @@
 import SwiftUI
 
 struct ConvertText: View {
+    @ObservedObject var vm: ViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack {
+                TextField("rawText", text: $vm.model.rawText, axis: .vertical).lineLimit(15...15).padding()
+                NavigationView {
+                HStack {
+                         Button{
+                             vm.encoding()
+                         } label: {
+                           Text("编码")
+                         }
+                        Button{
+                            vm.decoding()
+                        } label: {
+                          Text("解码")
+                        }
+                        Picker("method?", selection: $vm.model.method) {
+                             ForEach(vm.model.methods, id: \.self) {
+                                 Text($0)
+                             }
+                         }.frame(minWidth: 100)
+    //                    Toggle("With", isOn: $with).labelsHidden()
+                        ShareLink(item: vm.model.encoding) {
+                            Label("分享", systemImage:  "square.and.arrow.up")
+                        }
+                    }
+                }.frame(maxHeight: 44)
+       
+                TextField("resultText", text: $vm.model.encoding, axis: .vertical).lineLimit(15...15).padding()
+            }
+        }.scrollDismissesKeyboard(.immediately).tabItem{Label("文字", systemImage: "text.viewfinder")}
     }
 }
-
-struct ConvertText_Previews: PreviewProvider {
-    static var previews: some View {
-        ConvertText()
-    }
-}
+//
+//struct ConvertText_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ConvertText()
+//    }
+//}
