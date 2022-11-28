@@ -20,7 +20,7 @@ struct ContentView: View {
     var body: some View {
         ScrollView {
             VStack {
-                TextField("rawText", text: $vm.model.rawText, axis: .vertical).lineLimit(15...20).padding()
+                TextField("rawText", text: $vm.model.rawText, axis: .vertical).lineLimit(15...15).padding()
                 NavigationView {
                 HStack {
                          Button{
@@ -45,7 +45,7 @@ struct ContentView: View {
                     }
                 }.frame(maxHeight: 44)
        
-                TextField("resultText", text: $vm.model.encoding, axis: .vertical).lineLimit(15...20).padding()
+                TextField("resultText", text: $vm.model.encoding, axis: .vertical).lineLimit(15...15).padding()
             }
         }
     }
