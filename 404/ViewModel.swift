@@ -30,7 +30,13 @@ class ViewModel: ObservableObject {
         case "Base64":
             if let image = model.rawImage {
                 print("image is not null.")
-                model.encoding = image.jpegData(compressionQuality: 0.1)?.base64EncodedString() ?? ""
+                DispatchQueue.global(qos: .userInteractive).async {
+                    let s = image.jpegData(compressionQuality: 0.1)?.base64EncodedString() ?? ""
+                    DispatchQueue.main.async {
+                        self.model.encoding = s
+                    }
+                }
+                
             }
         default: break
         }
