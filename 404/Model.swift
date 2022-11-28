@@ -15,8 +15,8 @@ struct Model {
     
     var method = methodsConst[0]
     
-    var rawText: String = "要编码的或者要解码的..."
-    var encoding: String = "乱码"
+    var rawText: String = "编码前..."
+    var encoding: String = "编码后..."
     
     var rawImage: UIImage?
 }

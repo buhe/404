@@ -19,7 +19,7 @@ class ViewModel: ObservableObject {
     
     func decodingText() {
         switch model.method {
-        case "Base64": model.encoding = model.rawText.data.base64Decoded?.string ?? ""
+        case "Base64": model.rawText = model.encoding.data.base64Decoded?.string ?? ""
         default: break
         }
     }
